@@ -1,0 +1,521 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+
+main{
+    flex: 1;
+}
+
+/* Navbar */
+
+nav{
+    width: 100%;
+    padding: 0.5em 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #E5E0FF;
+    z-index: 1;
+}
+
+nav .logo a{
+    text-decoration: none;
+    font-size: 36px;
+    color: #0081C9;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 600;
+}
+
+nav .hamburger{
+    font-size: 26px;
+    display: none;
+}
+
+nav .nav-links ul{
+    display: flex;
+    list-style: none;
+}
+
+nav .nav-links ul li{
+    margin-left: 2em;
+}
+
+nav .nav-links ul li a{
+    display: block;
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: 500;
+    color: black;
+    text-transform: capitalize;
+}
+
+nav .nav-links ul li a:hover, nav .nav-links ul li .default {
+    color: #0081C9;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Main Content */
+
+.section-1{
+    padding: 1em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 0.5em;
+}
+
+.section-1 .quotes{
+    padding: 2em 2em 2em 5em;
+}
+
+.section-1 .quotes h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 45px;
+    font-weight: 800;
+    text-align: start;
+    margin-bottom: 0.5em;
+}
+
+.section-1 .quotes p{
+    font-size: 14px;
+    color: #567189;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 4em;
+}
+
+.section-1 .quotes a{
+    padding: 1em 1.5em;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 700;
+    background-color: #E5E0FF;
+    color: #0081C9;
+    border-radius: 2em;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.section-1 .quotes a:hover{
+    background-color: #0081C9;
+    color: #E5E0FF;
+}
+
+.section-1 .student-img{
+    padding-top: 1em;
+}
+
+.section-1 .student-img img{
+    height: 400px;
+    width: 500px;
+    border-radius: 0 0 2em 2em;
+}
+
+.company{
+    padding: 1em;
+}
+
+.company h1{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    font-family: 'Comfortaa', cursive;
+    margin-bottom: 1em;
+}
+
+.company .company-logos{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+.company .company-logos img{
+    width: 150px;
+    padding: 1em;
+    transition: all 0.2s ease-in-out;
+}
+
+.company .company-logos img:hover{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.course-section{
+    padding: 2em;
+    margin-bottom: 1.5em;
+}
+
+.course-section h1{
+    font-family: 'Comfortaa', cursive;
+    font-size: 30px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 1.5em;
+}
+
+.course-section .course-catalogue{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2em;
+}
+
+.course-section .course-catalogue .course{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5em 1em 2em 1em;
+    background-color: #E5E0FF;
+    border-radius: 1em;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transition: all 0.3s ease-in-out;
+}
+
+.course-section .course-catalogue .course:hover{
+    transform: scale(1.1);
+}
+
+.course-section .course-catalogue .course img{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 0.5em;
+}
+
+.course-section .course-catalogue .course h2{
+    font-family: 'Comfortaa', cursive;
+    font-weight: 800;
+    color: #0081C9;
+    margin-bottom: 10px;
+}
+
+.course-section .course-catalogue .course .rating{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: start;
+    align-items: center;
+    margin-bottom: 0.5em;
+}
+
+.course-section .course-catalogue .course .rating span{
+    color: #0081C9;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.course-section .course-catalogue .course .rating .stars i{
+    color: #0081C9;
+    font-size: 1em;
+}
+
+.course-section .course-catalogue .course p{
+    font-weight: 600;
+    color: #0081C9;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.course-section .course-catalogue .course a{
+    padding: 1em 1.5em;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 700;
+    background-color: #0081C9;
+    color: #E5E0FF;
+    border-radius: 2em;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;   
+}
+
+.student-reviews h1{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    font-family: 'Comfortaa', cursive;
+    margin-bottom: 1.5em;
+}
+
+.student-reviews{
+    margin-bottom: 3em;
+}
+
+.student-reviews .container{
+    /* height: 98vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.student-reviews .container .board{
+    max-width: 650px;
+    width: 100%;
+    background-color: #E5E0FF;
+    text-align: center;
+    border-radius: 1em;
+    padding: 0 0 1em 0;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.swiper {
+    width: 600px;
+    height: 400px;
+}
+
+.student-reviews .container .board .swiper .swiper-wrapper .swiper-slide .review{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.student-reviews .container .board .swiper .swiper-wrapper .swiper-slide .review .comment{
+    color: #0081C9;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 1.5em 1.5em 1em 1.5em;
+    width: 90%;
+}
+
+.student-reviews .container .board .swiper .swiper-wrapper .swiper-slide .review .profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.student-reviews .container .board .swiper .swiper-wrapper .swiper-slide .review .profile img{
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    margin: 1em 0;
+}
+
+.student-reviews .container .board .swiper .swiper-wrapper .swiper-slide .review .profile span{
+    color: #0081C9;
+    font-weight: 800;
+    font-family: 'Comfortaa', cursive;
+    font-size: 18px;
+}
+
+.student-reviews .container .board .swiper .swiper-wrapper .swiper-slide .review .profile .name{
+    margin-bottom: 0.5em;
+}
+
+.student-reviews .container .board .swiper .swiper-button-prev, .student-reviews .container .board .swiper .swiper-button-next{
+    color: #0081C9;
+}
+
+/* Footer */
+
+footer{
+    text-align: center;
+    padding: 0 1em 1em 1em;
+    color: #0081C9;
+    background-color: #E5E0FF;
+}
+
+footer .footer-links ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .footer-links ul li{
+    padding: 1em;
+}
+
+footer .footer-links ul li a{
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #0081C9;
+    transition: all 0.2s ease-in-out;
+}
+
+footer .socials, .socials h3{
+    margin-bottom: 0.5em;
+    font-weight: 800;
+    font-family: 'Comfortaa', cursive;
+}
+
+footer .socials a{
+    text-decoration: none;
+    color: #0081C9;
+    font-size: 24px;
+    padding: 0.5em;
+    transition: all 0.2s ease-in-out;
+}
+
+footer .footer-links ul li a:hover, footer .socials a:hover{
+    color: black;
+}
+
+/* Media Query */
+
+@media (max-width:1220px) {
+    .section-1 .quotes{
+        padding: 2em 2em 2em 3em;
+    }
+
+    .section-1 .student-img img{
+        height: 350px;
+        width: 500px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .company .company-logos{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2em;
+    }
+
+    .course-section .course-catalogue{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width:1000px) {
+    .section-1 .student-img img{
+        height: 300px;
+        width: 400px;
+    }
+
+    .section-1 .quotes h1{
+        font-size: 40px;
+    }
+
+    .course-section .course-catalogue{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width:900px) {
+    .section-1 .quotes{
+        padding: 1em;
+    }
+}
+
+@media (max-width: 768px) {
+    nav{
+        padding: 1em;
+        background-color: #E5E0FF;
+    }
+
+    nav .hamburger{
+        cursor: pointer;
+        display: block;
+        margin-right: 10px;
+    }
+
+    nav .nav-links{
+        position: absolute;
+        top: 65px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        opacity: 0;
+        background-color: #E5E0FF;
+    }
+
+    nav .nav-links.active{
+        opacity: 1;
+    }
+
+    nav .nav-links ul{
+        display: block;
+        width: fit-content;
+        text-align: center;
+        margin: 0 auto;   
+    }
+
+    nav .nav-links ul li {
+        margin: 1em 0;
+    }
+
+    nav .nav-links ul li a, nav .nav-links ul li .default {
+        color: #0081C9;
+        border-bottom: none;
+    }
+
+    .section-1{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .section-1 .quotes{
+        order: 1;
+    }
+
+    .student-reviews .container{
+       margin: 0 0.7em;
+    }
+
+    .student-reviews .container .board .swiper {
+        width: auto;
+    }
+
+    .student-reviews .container .board .swiper .swiper-wrapper .swiper-slide .review .comment{
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px){
+    .course-section .course-catalogue{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1em;
+    }
+}
+
+@media (max-width: 550px) {
+    .company .company-logos{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2em;
+    }
+}
+
+@media (max-width: 425px) {
+    .company .company-logos{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2em;
+    }
+
+    .section-1 .quotes h1{
+        font-size: 36px;
+    }
+
+    .section-1 .quotes p{
+        margin-bottom: 2.5em;
+    }
+
+    .section-1 .quotes a{
+        padding: 1em;
+        font-size: 14px;
+    }
+
+    .section-1 .student-img img{
+        height: 200px;
+        width: 300px;
+    }
+
+    .section-1 .quotes h1{
+        font-size: 36px;
+    }
+
+    .course-section .course-catalogue .course:hover{
+        transform: none;
+    }
+}

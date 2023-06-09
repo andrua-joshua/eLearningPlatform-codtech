@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login/Sign up page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
+    <link rel="stylesheet" href="../css/sign_in_form.css" />
+    <link rel="stylesheet" href="../css/home.css">
+    <style>
+      .msg {
+        display: block;
+        width: 100%;
+        font-size: 0.75em;
+        margin: -5px 0 -2px 0;
+        color: red;
+        min-height: 10px;
+      }
+      .error {
+        box-shadow: 0px 0px 3px red, inset -0px -0px 3px red;
+      }
+      #myMsg {
+        margin-top: 0;
+        font-size: 0.8em;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+        <div class="logo"><a href="index.html">Digital_Schools</a></div>
+        <div class="hamburger"><i class="fa-solid fa-bars"></i></div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="index.html" class="default">Home</a></li>
+                <li><a href="courses.html">Lessons</a></li>
+                <li><a href="mentors.html">Mentors</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+ 
+    <div class="container" id="container">
+      <div class="form-container sign-up-container">
+        <form id="signupForm" action="../php/signup.php" method="post">
+          <h1>Sign Up</h1>
+          <div class="social-container">
+            <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <span>or use your email for registration</span>
+          <input type="text" placeholder="Enter First Name" name="first_name" id="first_name" required/>
+          <span id="firstNameMsg" class="msg"></span>
+          <input type="text" placeholder="Enter Last Name" name="last_name" id="last_name" required/>
+          <span id="lastNameMsg" class="msg"></span>
+          <input type="email" placeholder="Enter Email" name="email" id="email" required/>
+          <span id="emailMsg" class="msg"></span>
+          <input type="password" placeholder="Enter Password" name="set_password" id="set_password"  required/>
+          <span id="setPasswordMsg" class="msg"></span>
+          <input type="password" placeholder="Confirm Password" name="confirm_password" id="confirm_password"  required/>
+          <button type="submit" id="signUpBtn">Sign Up</button>
+          <p id="myMsg"></p>
+        </form>
+      </div>
+      <div class="form-container sign-in-container">
+        <form id="loginForm">
+          <h1>Login</h1>
+          <div class="social-container">
+            <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <span>or use your account</span>
+          <input type="email" placeholder="Email" name="login_email" id="login_email"/>
+          <input type="password" placeholder="Password" name="login_password" id="login_password"/>
+          <a href="#">Forgot your password?</a>
+          <button type="button" id="signInBtn">Login</button>
+          <p id="loginMessage"></p>
+        </form>
+      </div>
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-left">
+            <h1>Welcome Back!</h1>
+            <p>
+              To keep connected with us please login with your personal info
+            </p>
+            <button class="ghost" id="signIn">Login</button>
+          </div>
+          <div class="overlay-panel overlay-right">
+            <h1><span id="greeting">Hello</span>, <span id="student_name">Student</span>!</h1>
+            <p>Login with your email and start your journey with us</p>
+            <button class="ghost" id="signUp">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../scripts/jquery.js"></script>
+    <script src="../scripts/sign_in_form.js"></script>
+    <footer>
+ 
+    </footer>
+  </body>
+</html>
